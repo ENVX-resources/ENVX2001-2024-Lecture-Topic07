@@ -644,12 +644,10 @@ predict(fit, data.frame(parent = 70))
 
 . . .
 
-What is the predicted child heights for parents of height 70, 72, and 73 inches?
-
-```{r}
-predict(fit, data.frame(parent = c(70, 72, 73)))
-```
-
+- Need to consider:
+    - Prediction quality
+    - Prediction performance
+    - **Week 9 - Predictive modelling**
 
 # Transformations
 
