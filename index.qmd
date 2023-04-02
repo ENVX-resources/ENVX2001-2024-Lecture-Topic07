@@ -1,5 +1,5 @@
 ---
-title: "Regression modelling - Simple linear regression"
+title: "Regression modelling"
 subtitle: "ENVX2001 - Applied Statistical Methods"
 date: today
 date-format: "MMM YYYY"
