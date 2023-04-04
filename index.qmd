@@ -19,6 +19,8 @@ format:
 execute: 
   eval: true
   echo: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -161,8 +163,8 @@ $$\epsilon_i \sim N(0, \sigma^2)$$
 
 - $Y_i$, the *response*, is an observed value of the dependent variable.
 - $\beta_0$, the *constant*, is the population intercept and is **fixed**.
-- $\beta_1$ is the population *slope* parameter, and like $\alpha$, is also **fixed**.
-- $\epsilon_i$ is the error associated with predictions of $y_i$, and unlike $\alpha$ or $\beta$, it is *not fixed*.
+- $\beta_1$ is the population *slope* parameter, and like $\beta_0$, is also **fixed**.
+- $\epsilon_i$ is the error associated with predictions of $y_i$, and unlike $\beta_0$ or $\beta_1$, it is *not fixed*.
 
 . . .
 
@@ -974,11 +976,21 @@ $$\widehat{log(Ozone)}=-0.262 + 0.0492 \cdot Temp + 0.00252 \cdot Solar.R - 0.06
 
 . . .
 
+Automating the model using `equatiomatic`:
+
+```{r}
+equatiomatic::extract_eq(multi_fit, use_coefs = TRUE, coef_digits = 3)
+```
+
+. . .
+
 **Holding all other variables constant:**
 
 - A one degree (&deg;F) increase in `Temp` is associated with a 4.9% increase in ozone concentration.
-- A one unit increase in `Solar.R` is associated with a 0.25% increase in ozone concentration.
+- A one unit increase in `Solar.R` is associated with a 0.3% increase in ozone concentration.
 - A one unit increase in `Wind` is associated with a 6.2% decrease in ozone concentration.
+
+
 
 ## Is MLR model better?
 

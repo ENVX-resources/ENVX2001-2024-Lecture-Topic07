@@ -556,9 +556,9 @@ report(fit)
 <li>
 <span class="math inline">\(\beta_0\)</span>, the <em>constant</em>, is the population intercept and is <strong>fixed</strong>.</li>
 <li>
-<span class="math inline">\(\beta_1\)</span> is the population <em>slope</em> parameter, and like <span class="math inline">\(\alpha\)</span>, is also <strong>fixed</strong>.</li>
+<span class="math inline">\(\beta_1\)</span> is the population <em>slope</em> parameter, and like <span class="math inline">\(\beta_0\)</span>, is also <strong>fixed</strong>.</li>
 <li>
-<span class="math inline">\(\epsilon_i\)</span> is the error associated with predictions of <span class="math inline">\(y_i\)</span>, and unlike <span class="math inline">\(\alpha\)</span> or <span class="math inline">\(\beta\)</span>, it is <em>not fixed</em>.</li>
+<span class="math inline">\(\epsilon_i\)</span> is the error associated with predictions of <span class="math inline">\(y_i\)</span>, and unlike <span class="math inline">\(\beta_0\)</span> or <span class="math inline">\(\beta_1\)</span>, it is <em>not fixed</em>.</li>
 </ul>
 <div class="fragment">
 <div class="callout callout-note callout-captioned callout-style-default">
@@ -1486,16 +1486,27 @@ F-statistic: 70.62 on 3 and 107 DF,  p-value: &lt; 2.2e-16</code></pre>
 </section><section id="interpretation" class="slide level2" data-auto-animate="true"><h2 data-id="quarto-animate-title">Interpretation</h2>
 <p><span class="math display">\[\widehat{log(Ozone)}=-0.262 + 0.0492 \cdot Temp + 0.00252 \cdot Solar.R - 0.0616 \cdot Wind\]</span></p>
 <div class="fragment">
+<p>Automating the model using <code>equatiomatic</code>:</p>
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-50_d48e0448483e4b32dc4b6271e219224b">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb70-1" class="hljs-ln-code"><a href="#cb70-1"></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(multi_fit, <span class="at">use_coefs =</span> <span class="cn">TRUE</span>, <span class="at">coef_digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><span class="math display">\[
+\operatorname{\widehat{log(Ozone)}} = -0.262 + 0.049(\operatorname{Temp}) + 0.003(\operatorname{Solar.R}) - 0.062(\operatorname{Wind})
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="fragment">
 <p><strong>Holding all other variables constant:</strong></p>
 <ul>
 <li>A one degree (°F) increase in <code>Temp</code> is associated with a 4.9% increase in ozone concentration.</li>
-<li>A one unit increase in <code>Solar.R</code> is associated with a 0.25% increase in ozone concentration.</li>
+<li>A one unit increase in <code>Solar.R</code> is associated with a 0.3% increase in ozone concentration.</li>
 <li>A one unit increase in <code>Wind</code> is associated with a 6.2% decrease in ozone concentration.</li>
 </ul>
 </div>
 </section><section id="is-mlr-model-better" class="slide level2"><h2>Is MLR model better?</h2>
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-50_8fd7d7376f2d03b5884770d6255deba2">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>sjPlot<span class="sc">::</span><span class="fu">tab_model</span>(fit_log, multi_fit, <span class="at">digits =</span> <span class="dv">4</span>, <span class="at">show.ci =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-51_342386de0700ed17d771177a53c1276c">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a>sjPlot<span class="sc">::</span><span class="fu">tab_model</span>(fit_log, multi_fit, <span class="at">digits =</span> <span class="dv">4</span>, <span class="at">show.ci =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <table style="border-collapse:collapse; border:none;">
