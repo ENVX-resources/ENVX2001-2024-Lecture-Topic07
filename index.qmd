@@ -4,7 +4,7 @@ subtitle: "ENVX2001 - Applied Statistical Methods"
 date: today
 date-format: "MMM YYYY"
 author: 
-  - name: Januar Harianto
+  - name: Liana Pozza
     affiliation: School of Life and Envoronmental Sciences
 institute: The University of Sydney
 format:
