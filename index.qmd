@@ -4,7 +4,7 @@ subtitle: "ENVX2001 - Applied Statistical Methods"
 date: today
 date-format: "MMM YYYY"
 author: 
-  - name: Liana Pozza
+  - name: Liana Pozza is cool
     affiliation: School of Life and Envoronmental Sciences
 institute: The University of Sydney
 format:
