@@ -1,26 +1,18 @@
 ---
 title: "Regression modelling"
-subtitle: "ENVX2001 - Applied Statistical Methods"
-date: today
-date-format: "MMM YYYY"
-author: 
-  - name: Liana Pozza is cool
-    affiliation: School of Life and Envoronmental Sciences
+subtitle: ENVX2001 Applied Statistical Methods
+author: Liana Pozza
 institute: The University of Sydney
-format:
-  revealjs: 
-    theme: [default, theme.scss]
-    slide-number: c/t
-    code-copy: true
-    code-link: true
-    code-overflow: wrap
-    highlight-style: arrow
-    embed-resources: false
-execute: 
-  eval: true
+date: last-modified # today | last-modified
+date-format: "MMM YYYY"
+execute:
+  cache: false
   echo: true
-editor_options: 
-  chunk_output_type: console
+editor-options:
+  canonical: true
+toc: true
+toc-depth: 1
+toc-title: Outline
 ---
 
 ```{r setup, include=FALSE}
