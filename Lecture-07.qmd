@@ -87,19 +87,12 @@ summary(fit)
 
 <br> 
 
-That's it... you have fitted a model! 
-
-. . .
-
-:::{.callout-caution}
-### Question
-But how do we assess the quality of the model?
-:::
+That's it... you have fitted a model...**But how do we assess its quality**?
 
 
 <!-- ```{r}
 library(report)
-report(fit)
+report(fit) 
 ```  -->
 
 # Simple linear regression
@@ -158,10 +151,11 @@ $$\epsilon_i \sim N(0, \sigma^2)$$
 - $\beta_1$ is the population *slope* parameter, and like $\beta_0$, is also **fixed**.
 - $\epsilon_i$ is the error associated with predictions of $y_i$, and unlike $\beta_0$ or $\beta_1$, it is *not fixed*.
 
-. . .
 
+::: fragment
 :::{.callout-note}
 [We tend to associate $\epsilon_i$ with the **residual**, which is a positive or negative difference from the "predicted" response, rather than error itself which is a difference from the **true** response]{style="color: red;"}
+:::
 :::
 
 ## Interpreting the relationship {auto-animate="true"}
