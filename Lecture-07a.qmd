@@ -25,10 +25,84 @@ ggplot2::theme_set(cowplot::theme_half_open())
 # ggplot2::theme_set(ggplot2::theme_minimal())
 ```
 
+# Welcome to regression modelling!
+
+## About me
+
+::: {layout-ncol=2}
+- Lecturer in Agricultural Data Science
+- Spatial modelling and mapping, Soil science, Precision Agriculture
+- This year back to being a student again, GradCert (Higher Education)
+
+![Narrabri cotton field](assets/Pozza_natural_habitat.jpg)
+:::
+
+
+## Learning Outcomes {auto-animate=true}
+
+LO1. demonstrate proficiency in designing sample schemes and analysing data from them using using R
+
+LO2. describe and identify the basic features of an experimental design; replicate, treatment structure and blocking structure
+
+LO3. demonstrate proficiency in the use or the statistical programming language R to an ANOVA and fit regression models to experimental data
+
+LO4. demonstrate proficiency in the use or the statistical programming language R to use multivariate methods to find patterns in data
+
+LO5. interpret the output and understand conceptually how its derived of a regression, ANOVA and multivariate analysis that have been calculated by R
+
+LO6. write statistical and modelling results as part of a scientific report
+
+LO7. appraise the validity of statistical analyses used publications.
+
+
+## Learning Outcomes {auto-animate=true}
+
+LO1. demonstrate proficiency in designing sample schemes and analysing data from them using using R
+
+LO2. describe and identify the basic features of an experimental design; replicate, treatment structure and blocking structure
+
+**LO3. demonstrate proficiency in the use or the statistical programming language R to** an ANOVA and **fit regression models to experimental data**
+
+LO4. demonstrate proficiency in the use or the statistical programming language R to use multivariate methods to find patterns in data
+
+**LO5. interpret the output and understand conceptually how its derived of a regression**, ANOVA and multivariate analysis that have been calculated by R
+
+LO6. write statistical and modelling results as part of a scientific report
+
+LO7. appraise the validity of statistical analyses used publications.
+
+<!---
+therefore, want students how to fit a linear regression model and be able to interpret 
+- Want to make sure we are using it for the right thing (linear relationship)
+- want to make sure we are fitting it properly
+- Want to then be able to interpret the output
+--->
+
+## Workflow {auto-animate=true}
+
+1. Model development
+    + Explore: visualise, summarise
+    + Transform predictors: linearise, reduce skewness/leverage
+    + Model: fit, check assumptions, interpret, transform. Repeat.
+  
+2. Variable selection
+    + VIF: remove predictors with high variance inflation factor
+    + Model selection: stepwise selection, AIC, principle of parsimony, assumption checks
+  
+3. Predictive modelling
+    + Predict: Use the model to predict new data
+    + Validate: Evaluate the model’s performance
+
+
+## Workflow {auto-animate=true}
+
+1. Model development
+    + Explore: visualise, summarise
+    + Transform predictors: linearise, reduce skewness/leverage
+    + Model: fit, check assumptions, interpret, transform. Repeat.
+
 
 # Brief history
-
-
 
 ![Adrien-Marie Legendre](assets/legendre.jpg)
 ![Carl Friedrich Gauss](assets/gauss.jpg)
@@ -137,6 +211,10 @@ ggplot(datasaurus_dozen, aes(x=x, y=y)) +
 *All of these data have the **same** correlation coefficient, mean and s.d. but look vastly different.*
 
 ## Simple linear regression modelling {auto-animate="true"}
+
+<!-- ```{r}
+words fall of the page at the moment 
+```  -->
 
 We want to predict an outcome $Y$ based on a predictor $x$ for $i$ number of observations: 
 
