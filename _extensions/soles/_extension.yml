@@ -14,5 +14,6 @@ contributes:
       title-slide-attributes:
         data-background-image: "title-slide.png"
         data-background-size: contain
+      chalkboard: true
     pptx: 
       reference-doc: template.pptx
