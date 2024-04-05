@@ -3,9 +3,11 @@
 .RData
 .Ruserdata
 
-.trunk/
 *_files/
 /.quarto/
+
 /.luarc.json
 
-*.html
+
+template.html
+template.pdf
