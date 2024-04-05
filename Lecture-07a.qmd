@@ -321,7 +321,6 @@ $$\color{firebrick}{argmin_{\beta_0, \beta_1}} \sum_{i=1}^n (y_i - \color{royalb
 ![[source](https://github.com/Enchufa2/ls-springs)](assets/leastsquares.gif){fig-align="center"}
 
 
-
 ## Using `lm()`
 
 Linear regression in R is performed using the `lm()` function:
@@ -330,7 +329,6 @@ Linear regression in R is performed using the `lm()` function:
 fit <- lm(child ~ parent, data = Galton)
 fit
 ```
-
 
 . . .
 
